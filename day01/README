@@ -1,0 +1,33 @@
+# Dynamic Array
+
+Implementation of a dynamic/resizable array in Python.
+
+## Approach
+
+The array keeps track of two values:
+
+- `size`: number of elements currently stored
+- `capacity`: total number of elements that can be stored before resizing
+
+When `pushback()` is called and the array is full, the capacity is doubled.
+A new array is allocated and the existing elements are copied to it.
+
+## Operations
+
+| Operation | Complexity |
+|---|---:|
+| get | O(1) |
+| set | O(1) |
+| pushback | O(1) amortized |
+| popback | O(1) |
+| resize | O(n) |
+| getSize | O(1) |
+| getCapacity | O(1) |
+
+## Key Takeaway
+
+Dynamic arrays provide constant-time random access while allowing the
+underlying storage to grow when necessary.
+
+Doubling the capacity during resizing makes `pushback()` O(1) amortized,
+even though an individual resize operation takes O(n).
