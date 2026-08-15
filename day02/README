@@ -1,0 +1,28 @@
+# Singly Linked List
+
+Implementation of a singly linked list in Python.
+
+## Approach
+
+The linked list is represented using `ListNode` objects, where each node stores:
+
+- `val`: the value stored in the node
+- `next`: a reference to the next node
+
+The `LinkedList` class maintains a reference to the first node through `head`.
+
+### Operations
+
+| Operation | Complexity |
+|---|---:|
+| `get(i)` | O(n) |
+| `insertHead(val)` | O(1) |
+| `insertTail(val)` | O(n) |
+| `remove(i)` | O(n) |
+| `getValues()` | O(n) |
+
+## Key Takeaway
+
+A singly linked list provides constant-time insertion at the head because only the `head` reference needs to be updated.
+
+Operations involving a specific index require traversing the list from the head, resulting in O(n) time complexity.
